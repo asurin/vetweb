@@ -1,0 +1,18 @@
+<h4 class="vets_pad"> Use this page to edit vet details </h4>
+
+
+<%= form_for @vet do |f| %>
+  <%= f.label :name %>:
+  <%= f.text_field :name %><br />
+
+  <%= f.label :specialty %>:
+  <%= f.text_field :specialty %><br />
+
+  <%= f.submit 'Update vet record' %>
+  <br>
+  <br>
+
+  <button type="button" class="btn btn-light btn-sm btn-outline-secondary"><%= link_to '<- Back to vet record', vet_path(@vet) %></button>
+
+
+<% end %>

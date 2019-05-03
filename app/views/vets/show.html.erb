@@ -1,0 +1,30 @@
+<h4 class="vets_pad"> Vet details </h4>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Specialty</th>
+      <th scope="col">Vet ID</th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+      <tr>
+        <td><%= @vet.name %></td>
+        <td><%= @vet.specialty %></td>
+        <td><%= @vet.id %></td>
+      </tr>
+
+  </tbody>
+</table>
+
+<button type="button" class="btn btn-light btn-outline-secondary btn-sm" ><%= link_to 'Back to all vets', vets_path %></button>
+<button type="button" style="float:right" class="btn btn-light btn-outline-success" ><%= link_to 'Edit vet record', edit_vet_path(@vet) %></button>
+<br>
+<br>
+<button type="button" style="float:right" class="btn btn-light btn-outline-danger btn-sm" ><%= link_to 'Delete vet record', vet_path(@vet), method: :delete %></button>
+
+
+<br>

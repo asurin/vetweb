@@ -1,0 +1,27 @@
+<h4 class="rooms_pad"> Room details </h4>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Room type</th>
+      <th scope="col">Room ID</th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+      <tr>
+        <td><%= @room.name %></td>
+        <td><%= @room.room_type %></td>
+        <td><%= @room.id %></td>
+      </tr>
+
+  </tbody>
+</table>
+
+<button type="button" class="btn btn-light btn-outline-secondary btn-sm" ><%= link_to 'Back to all rooms', rooms_path %></button>
+<button type="button" style="float:right" class="btn btn-light btn-outline-success" ><%= link_to 'Edit room record', edit_room_path(@room) %></button>
+<br>
+<br>
+<button type="button" style="float:right" class="btn btn-light btn-outline-danger btn-sm" ><%= link_to 'Delete room record', room_path(@room), method: :delete %></button>

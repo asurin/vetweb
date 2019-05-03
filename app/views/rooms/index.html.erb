@@ -1,0 +1,24 @@
+<h4 class="rooms_pad"> Listing all rooms </h4>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Room type</th>
+        <th scope="col">Room ID</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rooms.each do |room| %>
+      <tr>
+        <td><%= link_to room.name, room_path(room.id) %></td>
+        <td><%= room.room_type %></td>
+        <td><%= room.id %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<button type="button" class="btn btn-light btn-outline-success" style="float:right"><%= link_to 'Click here to add new room', new_room_path %></button>
+<button type="button" class="btn btn-light btn-sm btn-outline-secondary"><%= link_to 'Back to home screen', root_path %></button>

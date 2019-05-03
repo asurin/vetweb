@@ -1,0 +1,29 @@
+<h1 class="patients_pad"> Patient details </h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Date of Birth</th>
+      <th scope="col">Animal</th>
+      <th scope="col">ID Number</th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+      <tr>
+        <td><%= @patient.name %></td>
+        <td><%= @patient.dob %></td>
+        <td><%= @patient.animal %></td>
+        <td><%= @patient.id %></td>
+      </tr>
+
+  </tbody>
+</table>
+
+<button type="button" class="btn btn-light btn-outline-secondary btn-sm" ><%= link_to '<i class="fas fa-arrow-left"></i> Back to all patients'.html_safe, patients_path %></button>
+<button type="button" style="float:right" class="btn btn-light btn-outline-success" ><%= link_to 'Edit patient record', edit_patient_path(@patient) %></button>
+<br>
+<br>
+<button type="button" style="float:right" class="btn btn-light btn-outline-danger btn-sm" ><%= link_to 'Delete patient record', patient_path(@patient), method: :delete %></button>

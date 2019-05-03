@@ -1,0 +1,20 @@
+<h4 class="rooms_pad"> Use this page to enter new room details </h4>
+
+<% @room.errors.each do |attribute, message| %>
+<div class= "alert" > <%= attribute %> : <%= message %>
+  </div>
+<% end %>
+
+<%= form_for @room do |f| %>
+<div class="form-group">
+  <%= f.label :name %>:
+  <%= f.text_field :name, class: "form-control", placeholder: "eg. Red room" %>
+</div>
+<div class="form-group">
+  <%= f.label :type %>:
+  <%= f.text_field :room_type, class: "form-control", placeholder: "eg. Operating room"  %>
+</div>
+
+  <%= f.submit 'Add new room' %>
+
+<% end %>

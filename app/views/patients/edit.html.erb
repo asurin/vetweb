@@ -1,0 +1,22 @@
+<h4 class="patients_pad"> Edit patient details below</h4>
+
+
+<%= form_for @patient, as: :patient do |f| %>
+  <%= f.label :name %>:
+  <%= f.text_field :name %><br />
+
+  <%= f.label :age %>:
+  <%= f.text_field :dob %><br />
+
+  <%= f.label :animal %>:
+  <%= f.text_field :animal %><br />
+
+  <br>
+  <%= f.submit 'Update patient record' %>
+  <br>
+  <br>
+
+  <button type="button" class="btn btn-light btn-sm btn-outline-secondary"><%= link_to '<- Back to patient record', patient_path(@patient) %></button>
+
+
+<% end %>

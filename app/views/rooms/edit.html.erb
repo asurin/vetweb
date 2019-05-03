@@ -1,0 +1,19 @@
+<h4 class="rooms_pad"> Use this page to edit room details </h4>
+
+
+<%= form_for @room do |f| %>
+  <%= f.label :name %>:
+  <%= f.text_field :name %><br />
+
+  <%= f.label :room_type %>:
+  <%= f.text_field :room_type %><br />
+
+  <%= f.submit 'Update room record' %>
+
+  <br>
+  <br>
+
+  <button type="button" class="btn btn-light btn-sm btn-outline-secondary"><%= link_to '<- Back to room record', room_path(@room) %></button>
+
+
+<% end %>

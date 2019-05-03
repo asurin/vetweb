@@ -1,0 +1,27 @@
+<h4 class="patients_pad">  Listing all patients </h4>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Date of Birth</th>
+      <th scope="col">Animal</th>
+      <th scope="col">ID Number</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @patients.each do |patient| %>
+      <tr>
+        <td><%= link_to patient.name, patient_path(patient.id) %></td>
+        <td><%= patient.dob %></td>
+        <td><%= patient.animal %></td>
+        <td><%= patient.id %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+
+<button type="button" class="btn btn-light btn-outline-success" style="float:right"><%= link_to '+ Add new patient', new_patient_path %></button>
+<button type="button" class="btn btn-light btn-sm btn-outline-secondary"><%= link_to '<- Back to home screen', root_path %></button>
